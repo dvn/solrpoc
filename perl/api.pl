@@ -26,10 +26,14 @@ while ( my $study = shift @{ $titlesearch_dd->{searchHits}{study} } ) {
     my $metadata_dd = XMLin($metadata_xml);
     my $abstract = $metadata_dd->{stdyDscr}{stdyInfo}{abstract};
     my $title = $metadata_dd->{stdyDscr}{citation}{titlStmt}{titl};
+    my $date = $metadata_dd->{stdyDscr}{citation}{distStmt}{distDate}{date};
+    $date = $date ? $date : 'N/A';
+    ($date) = $date =~ /^(\d\d\d\d)/;
     my $hashref = {
         field => [
             { name => 'id',    content => $study->{ID} },
             { name => 'title', content => $title },
+            { name => 'cat',   content => $date },
         ]
     };
     my $doc_xml = XMLout( $hashref, RootName => 'doc' );
