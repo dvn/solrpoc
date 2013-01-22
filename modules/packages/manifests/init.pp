@@ -9,4 +9,13 @@ class packages {
     ensure => installed,
   }
 
+  $perl_dependencies = [
+    'perl-Readonly',
+    'perl-XML-Simple',
+  ]
+
+  package { $perl_dependencies:
+    ensure => installed,
+  }
+
 }
