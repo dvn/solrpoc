@@ -12,7 +12,7 @@ See also https://redmine.hmdc.harvard.edu/issues/2656
 
 `vagrant up`
 
-"Solritas" interface: http://localhost:8983/solr/collection1/browse
+"Solritas" interface: <http://localhost:8983/solr/collection1/browse>
 
 # DVN API
 
