@@ -6,6 +6,7 @@ use Readonly;
 use XML::Simple;
 use LWP::Simple;
 use Data::Dumper;
+use DateTime;
 binmode STDOUT, ':encoding(utf8)';
 
 Readonly my $api_url => 'https://dvn.iq.harvard.edu/dvn/api';
@@ -75,12 +76,15 @@ while ( my $study = shift @{ $titlesearch_dd->{searchHits}{study} } ) {
     #say $author;
     $date = $date ? $date : 'N/A';
     ($date) = $date =~ /^(\d\d\d\d)/;
+    my $dt = DateTime->new( year => $date );
+# 'The trailing "Z" designates UTC time and is mandatory' -- http://lucene.apache.org/solr/4_1_0/solr-core/org/apache/solr/schema/DateField.html
+    my $iso8601 = $dt->iso8601() . 'Z';
     my $hashref = {
         field => [
-            { name => 'id',     content => $study->{ID} },
-            { name => 'title',  content => $title },
-            { name => 'cat',    content => $date },
-            { name => 'author', content => $author },
+            { name => 'id',                 content => $study->{ID} },
+            { name => 'title',              content => $title },
+            { name => 'manufacturedate_dt', content => $iso8601 },
+            { name => 'author',             content => $author },
         ]
     };
     my $doc_xml = XMLout( $hashref, RootName => 'doc' );
