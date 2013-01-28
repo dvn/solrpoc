@@ -84,6 +84,7 @@ while ( my $study = shift @{ $titlesearch_dd->{searchHits}{study} } ) {
             { name => 'id',                 content => $study->{ID} },
             { name => 'title',              content => $title },
             { name => 'manufacturedate_dt', content => $iso8601 },
+            { name => 'cat',                content => $date },
             { name => 'author',             content => $author },
         ]
     };
