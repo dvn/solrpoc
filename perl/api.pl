@@ -63,7 +63,9 @@ while ( my $study = shift @{ $titlesearch_dd->{searchHits}{study} } ) {
     my $abstract = $metadata_dd->{stdyDscr}{stdyInfo}{abstract};
     my $title    = $metadata_dd->{stdyDscr}{citation}{titlStmt}{titl};
     #my $date = $metadata_dd->{stdyDscr}{citation}{distStmt}{distDate}{date};
-    my $date = $metadata_dd->{stdyDscr}{citation}{prodStmt}{prodDate}{date};
+    my $date     = $metadata_dd->{stdyDscr}{citation}{prodStmt}{prodDate}{date};
+    my $producer = $metadata_dd->{stdyDscr}{citation}{distStmt}{distrbtr}{content};
+    #say $producer;
     #say $study->{ID};
     next if ref $metadata_dd->{stdyDscr}{citation}{rspStmt}{AuthEnty} ne 'ARRAY';
     #say ref $metadata_dd->{stdyDscr}{citation}{rspStmt}{AuthEnty}[0];
@@ -85,6 +87,7 @@ while ( my $study = shift @{ $titlesearch_dd->{searchHits}{study} } ) {
             { name => 'title',              content => $title },
             { name => 'manufacturedate_dt', content => $iso8601 },
             { name => 'cat',                content => $date },
+            { name => 'manu',               content => $producer },
             { name => 'author',             content => $author },
         ]
     };
