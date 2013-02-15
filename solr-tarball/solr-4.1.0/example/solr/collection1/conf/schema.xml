@@ -96,7 +96,7 @@
       and back compatibility is not guaranteed.  Names with both leading and
       trailing underscores (e.g. _version_) are reserved.
    -->
-        
+   <!-- we are using this id... --> 
    <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" /> 
    <field name="sku" type="text_en_splitting_tight" indexed="true" stored="true" omitNorms="true"/>
    <field name="name" type="text_general" indexed="true" stored="true"/>
@@ -112,6 +112,106 @@
 
    <field name="store" type="location" indexed="true" stored="true"/>
 
+   <!-- addText below (TODO: addDate) -->
+   <!-- this is just some test schema... not at all final... especially required=false -->
+   <field name="abstractText" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="accessToSources" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="actionsToMinimizeLoss" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="authorAffiliation" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="authorName" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="authority" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="availabilityStatus" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="characteristicOfSources" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="citationRequirements" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="cleaningOperations" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="collectionMode" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="collectionSize" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="conditions" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="confidentialityDeclaration" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="contact" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="controlOperations" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="country" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="dataCollectionSituation" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="dataCollector" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="dataSources" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="depositor" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="depositorRequirements" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="deviationsFromSampleDesign" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="disclaimer" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="distributorContact" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="distributorContactAffiliation" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="distributorContactEmail" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="distributorName" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="dvOwnerId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="fileDescription" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="frequencyOfDataCollection" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="fundingAgency" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="geographicCoverage" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="geographicUnit" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="globalId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="keywordValue" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="keywordVocabulary" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="kindOfData" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="originOfSources" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="originalArchive" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="otherDataAppraisal" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="otherId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="otherIdAgency" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="otherReferences" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="owner" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="placeOfAccess" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="producerName" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="protocol" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="relatedMaterial" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="relatedPublications" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="relatedPublicationsId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="relatedPublicationsURL" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="relatedStudy" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="replicationFor" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="replicationForId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="replicationForURL" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="researchInstrument" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="responseRate" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="restrictions" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="samplingErrorEstimate" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="samplingProcedure" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="seriesInformation" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="seriesName" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="specialPermissions" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyCompletion" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyEastLongitude" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyGrantNumber" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyGrantNumberAgency" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyLevelErrorNotes" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyNorthLatitude" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyNoteSubject" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyNoteText" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyNoteType" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studySoftware" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studySoftwareVersion" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studySouthLatitude" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyVersion" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="studyWestLongitude" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="subtitle" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="timeMethod" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="title" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="topicClassValue" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="topicClassVocabulary" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="topicVocabClassURI" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="unf" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="unitOfAnalysis" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="universe" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="varId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="varLabel" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="varName" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="varStudyFileId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="varStudyId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="versionDate" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="versionId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="versionNumber" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="weighting" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+
    <!-- Common metadata fields, named specifically to match up with
      SolrCell metadata when parsing rich documents such as Word, PDF.
      Some fields are multiValued only because Tika currently may return
@@ -120,7 +220,7 @@
        "content_type": From the HTTP headers of incoming stream
        "resourcename": From SolrCell request param resource.name
    -->
-   <field name="title" type="text_general" indexed="true" stored="true" multiValued="true"/>
+   <!--<field name="title" type="text_general" indexed="true" stored="true" multiValued="true"/>-->
    <field name="subject" type="text_general" indexed="true" stored="true"/>
    <field name="description" type="text_general" indexed="true" stored="true"/>
    <field name="comments" type="text_general" indexed="true" stored="true"/>
