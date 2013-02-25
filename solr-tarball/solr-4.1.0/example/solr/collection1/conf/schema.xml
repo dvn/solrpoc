@@ -112,7 +112,6 @@
 
    <field name="store" type="location" indexed="true" stored="true"/>
 
-   <!-- addText below (TODO: addDate) -->
    <!-- this is just some test schema... not at all final... especially required=false -->
    <field name="abstractText" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="accessToSources" type="string" indexed="true" stored="true" required="false" multiValued="false" />
@@ -211,6 +210,15 @@
    <field name="versionId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="versionNumber" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="weighting" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+
+   <field name="abstractDate" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="dateOfCollection" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="dateOfCollectionEnd" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="dateOfDeposit" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="distributionDate" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="productionDate" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="timePeriodCoveredEnd" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="timePeriodCoveredStart" type="string" indexed="true" stored="true" required="false" multiValued="false" />
 
    <!-- Common metadata fields, named specifically to match up with
      SolrCell metadata when parsing rich documents such as Word, PDF.
