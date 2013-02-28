@@ -113,11 +113,11 @@
    <field name="store" type="location" indexed="true" stored="true"/>
 
    <!-- this is just some test schema... not at all final... especially required=false -->
-   <field name="abstractText" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="abstractText" type="string" indexed="true" stored="true" required="false" multiValued="true" />
    <field name="accessToSources" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="actionsToMinimizeLoss" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="authorAffiliation" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="authorName" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="authorAffiliation" type="string" indexed="true" stored="true" required="false" multiValued="true" />
+   <field name="authorName" type="string" indexed="true" stored="true" required="false" multiValued="true" />
    <field name="authority" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="availabilityStatus" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="characteristicOfSources" type="string" indexed="true" stored="true" required="false" multiValued="false" />
@@ -140,16 +140,16 @@
    <field name="distributorContact" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="distributorContactAffiliation" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="distributorContactEmail" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="distributorName" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="distributorName" type="string" indexed="true" stored="true" required="false" multiValued="true" />
    <field name="dvOwnerId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="fileDescription" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="fileDescription" type="string" indexed="true" stored="true" required="false" multiValued="true" />
    <field name="frequencyOfDataCollection" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="fundingAgency" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="geographicCoverage" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="geographicUnit" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="globalId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="keywordValue" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="keywordVocabulary" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="keywordValue" type="string" indexed="true" stored="true" required="false" multiValued="true" />
+   <field name="keywordVocabulary" type="string" indexed="true" stored="true" required="false" multiValued="true" />
    <field name="kindOfData" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="originOfSources" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="originalArchive" type="string" indexed="true" stored="true" required="false" multiValued="false" />
@@ -159,11 +159,11 @@
    <field name="otherReferences" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="owner" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="placeOfAccess" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="producerName" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="producerName" type="string" indexed="true" stored="true" required="false" multiValued="true" />
    <field name="protocol" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="relatedMaterial" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="relatedPublications" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="relatedPublicationsId" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="relatedPublications" type="string" indexed="true" stored="true" required="false" multiValued="true" />
+   <field name="relatedPublicationsId" type="string" indexed="true" stored="true" required="false" multiValued="true" />
    <field name="relatedPublicationsURL" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="relatedStudy" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="replicationFor" type="string" indexed="true" stored="true" required="false" multiValued="false" />
@@ -195,9 +195,9 @@
    <field name="subtitle" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="timeMethod" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="title" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="topicClassValue" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="topicClassVocabulary" type="string" indexed="true" stored="true" required="false" multiValued="false" />
-   <field name="topicVocabClassURI" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="topicClassValue" type="string" indexed="true" stored="true" required="false" multiValued="true" />
+   <field name="topicClassVocabulary" type="string" indexed="true" stored="true" required="false" multiValued="true" />
+   <field name="topicVocabClassURI" type="string" indexed="true" stored="true" required="false" multiValued="true" />
    <field name="unf" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="unitOfAnalysis" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="universe" type="string" indexed="true" stored="true" required="false" multiValued="false" />
